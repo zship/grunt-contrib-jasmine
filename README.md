@@ -1,7 +1,8 @@
-# grunt-contrib-jasmine [![Build Status](https://secure.travis-ci.org/gruntjs/grunt-contrib-jasmine.png?branch=master)](http://travis-ci.org/gruntjs/grunt-contrib-jasmine)
-
 > Run jasmine specs headlessly through PhantomJS.
 
+This is a fork of gruntjs/grunt-contrib-jasmine which aims to provide only what
+gruntjs/grunt-contrib-qunit provides--that is, running jasmine test runners
+through PhantomJS and nothing else.
 
 
 ## Getting Started

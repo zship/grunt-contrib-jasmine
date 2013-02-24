@@ -36,6 +36,7 @@ module.exports = function(grunt) {
     // Merge task-specific options with these defaults.
     var options = this.options({
       timeout : 10000,
+	  inject: path.join(__dirname, 'jasmine/reporters/PhantomReporter.js'),
       specs   : [],
       helpers : [],
       vendor  : [],
@@ -47,23 +48,9 @@ module.exports = function(grunt) {
       junit: {}
     });
 
-    if (options.template === 'requirejs') {
-      grunt.log.warn(
-        'The requirejs template is no longer included in grunt-contrib-jasmine core.\n' +
-        'Please see the https://github.com/gruntjs/grunt-contrib-jasmine README for details'
-      );
-    }
-
-    if (grunt.option('debug')) {
-      grunt.log.debug(options);
-    }
+	options.outfile = this.filesSrc[0];
 
     setup(options);
-
-    jasmine.buildSpecrunner(this.filesSrc,options);
-
-    // If we're just building (e.g. for web), skip phantom.
-    if (this.flags.build) return;
 
     var done = this.async();
     phantomRunner(options, function(err,status) {
