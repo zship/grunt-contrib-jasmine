@@ -1,0 +1,14 @@
+{
+  "name": "grunt-contrib-jasmine",
+  "version": "0.3.x",
+  "dependencies": {
+    "grunt-lib-phantomjs": {
+      "version": "0.3.x",
+      "dependencies": {
+        "phantomjs": {
+          "version": "1.9.0-1"
+        }
+      }
+    }
+  }
+}
