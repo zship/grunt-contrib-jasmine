@@ -1,7 +1,7 @@
 {
   "name": "grunt-contrib-jasmine",
   "description": "Run jasmine specs headlessly through PhantomJS.",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "homepage": "https://github.com/gruntjs/grunt-contrib-jasmine",
   "author": {
     "name": "Grunt Team",
@@ -28,7 +28,7 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "grunt-lib-phantomjs": "0.3.x",
+    "grunt-lib-phantomjs": "0.3.0",
     "rimraf": "~2.0.3"
   },
   "devDependencies": {
